@@ -13,6 +13,11 @@ build/
 *.iml
 *.ipr
 out/
+reports/
+docs/
+gauge_bin/
+logs/
+.gauge/
 
 ### VS Code ###
 .vscode/
