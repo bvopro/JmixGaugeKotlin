@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.7.20'
     id 'org.gauge' version '1.8.2'
     id 'java'
+    id "jacoco"
 }
 
 apply plugin: 'org.springframework.boot'
@@ -49,4 +50,26 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+}
+
+jacocoTestReport {
+    reports {
+        html.enabled true
+        xml.enabled false
+        csv.enabled false
+    }
+}
+
+gauge {
+//    specsDir = 'specs'
+//    inParallel = true
+//    nodes = 2
+//    env = 'dev'
+//    tags = 'tag1'
+//    additionalFlags = '--coverage'
+//    gaugeRoot = '/opt/gauge'
 }
